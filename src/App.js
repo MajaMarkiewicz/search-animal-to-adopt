@@ -11,7 +11,7 @@ const App = () => {
         <div>
           <h1 className="logo">Adopt Me!</h1>
             <Route exact path="/" component={SearchParams}/>
-            <Route path="/details" component={Details} />
+            <Route path="/details/:id" component={Details} />
         </div>
       </HashRouter>
     </React.StrictMode>
