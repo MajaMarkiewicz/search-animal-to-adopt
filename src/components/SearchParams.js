@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import useDropdown from "./useDropdown";
+import useDropdown from "./useDropdown"
+import Results from './Results'
 import pet, { ANIMALS } from '@frontendmasters/pet'
 
 const SearchParams = () => {
@@ -15,7 +16,6 @@ const SearchParams = () => {
      breed,
      type: animal
    })
-
     setPets(animals || [])
   }
 
@@ -43,10 +43,11 @@ const SearchParams = () => {
                  onChange={ e => setLocation(e.target.value)}
           />
         </label>
-        <AnimalDropdown></AnimalDropdown>
-        <BreedDropdown></BreedDropdown>
+        <AnimalDropdown/>
+        <BreedDropdown/>
         <button> Submit </button>
       </form>
+      <Results pets={pets}/>
     </div>
   )
 }
