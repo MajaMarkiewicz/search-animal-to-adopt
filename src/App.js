@@ -1,6 +1,6 @@
 import React from 'react'
 import { render } from 'react-dom'
-import { HashRouter, Route } from 'react-router-dom'
+import { HashRouter, Route, Link } from 'react-router-dom'
 import SearchParams from './components/SearchParams'
 import Details from "./components/Details";
 
@@ -9,9 +9,9 @@ const App = () => {
     <React.StrictMode>
       <HashRouter>
         <div>
-          <h1 className="logo">Adopt Me!</h1>
-            <Route exact path="/" component={SearchParams}/>
-            <Route path="/details/:id" component={Details} />
+          <Link to="/" className="logo">Adopt Me!</Link>
+          <Route exact path="/" component={SearchParams}/>
+          <Route path="/details/:id" component={Details} />
         </div>
       </HashRouter>
     </React.StrictMode>
