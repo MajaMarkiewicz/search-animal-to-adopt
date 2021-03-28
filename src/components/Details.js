@@ -31,7 +31,7 @@ class Details extends React.Component {
     const { animal, breed, location, description, name } = this.state
 
     return (
-      <div>
+      <div className="details">
         <h1>{name}</h1>
         <h2>{`${animal} - ${breed} - ${location}`}</h2>
         <button>Adopt {name}</button>
