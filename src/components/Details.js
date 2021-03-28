@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { Component } from 'react'
 import pet from '@frontendmasters/pet'
+import ErrorBoundary from "./ErrorBoundary";
 
-class Details extends React.Component {
+class Details extends Component {
   constructor(props) {
     super(props)
     this.state = { loading: true }
@@ -41,4 +42,10 @@ class Details extends React.Component {
   }
 }
 
-export default Details
+export default function DetailsWithErrorBoundary(props) {
+  return (
+    <ErrorBoundary>
+      <Details {...props} />
+    </ErrorBoundary>
+  )
+}
