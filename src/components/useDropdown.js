@@ -26,4 +26,4 @@ const useDropdown = (label, defaultState, options) => {
   return [state, Dropdown, setState]
 }
 
-export default useDropdown;
+export default useDropdown

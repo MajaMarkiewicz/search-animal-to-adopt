@@ -1,7 +1,7 @@
 {
   "name": "Adopt-Me",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "src/App.js",
   "scripts": {
     "dev": "parcel src/index.html",
     "format": "prettier \"src/**/*.{js, html}\" --write",
@@ -14,6 +14,10 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "@babel/core": "^7.4.3",
+    "@babel/plugin-proposal-class-properties": "^7.4.0",
+    "@babel/preset-env": "^7.4.3",
+    "@babel/preset-react": "^7.0.0",
     "babel-eslint": "^10.1.0",
     "cross-env": "^7.0.3",
     "eslint": "^7.22.0",
